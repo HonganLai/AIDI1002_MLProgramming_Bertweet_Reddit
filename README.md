@@ -5,6 +5,10 @@ This report explores the sentiment classification component of the **BERTweet** 
 
 ---
 
+## Architecture
+
+![Architecture](images/Architecture.png)
+
 ## Reproducing Sentiment Classification from the Paper
 
 I reproduced the sentiment classification task from the paper using the **SemEval-2017 Task 4** dataset:  
