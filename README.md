@@ -8,9 +8,9 @@ This project investigates sentiment classification using the pre-trained languag
 
 The architecture consists of three main components:
 
-1. **Reproduction Phase**: Reimplementation of the original BERTweet-based sentiment classifier using the **SemEval-2017 Task 4** Twitter dataset.
-2. **Domain Adaptation Phase**: Fine-tuning the reproduced model on Reddit sentiment data to evaluate generalization.
-3. **Cross-Domain Evaluation**: Comparative performance analysis on a separate human-annotated Reddit dataset.
+1. **Reproduction Phase**: Reimplementation of the original BERTweet-based sentiment classifier as described in the [BERTweet paper](https://arxiv.org/abs/2005.10200), using the **SemEval-2017 Task 4** Twitter dataset.
+2. **Domain Adaptation Phase**: Fine-tuning the reproduced model on [LingoIITGN/reddit-sentiment-model-hubs](https://huggingface.co/datasets/LingoIITGN/reddit-sentiment-model-hubs) to evaluate generalization.
+3. **Cross-Domain Evaluation**: Comparative performance analysis on a [Kaggle: Reddit Sentimental analysis Dataset](https://www.kaggle.com/datasets/cosmos98/twitter-and-reddit-sentimental-analysis-dataset?resource=download).
 
 ![Architecture](images/Architecture.png)
 
@@ -31,19 +31,21 @@ The reproduced model achieved an **F1-score of 71%**, which is reasonably close 
 
 To evaluate the robustness of the BERTweet model across platforms, the classifier was fine-tuned on Reddit comments using the following dataset:
 
-- **Dataset**: [Sentiment Analysis of Reddit Data (Kaggle)](https://www.kaggle.com/code/amarsharma768/sentiment-analysis-of-reddit-data)
+- **Dataset**: [LingoIITGN/reddit-sentiment-model-hubs](https://huggingface.co/datasets/LingoIITGN/reddit-sentiment-model-hubs)
 
 The fine-tuned model achieved a **macro-average F1-score of 0.93**, indicating successful adaptation to a different linguistic domain.
 
 ---
 
-## Phase 3: Evaluation on Human-Annotated Reddit Data
+## Phase 3: Cross-Domain Evaluation other reddit dataset
 
 Both models were evaluated on a held-out Reddit dataset to assess cross-domain generalization:
 
-- **Evaluation Dataset**: [Hugging Face: The Reddit Dataset (SocialGrep)](https://huggingface.co/datasets/SocialGrep/the-reddit-dataset-dataset)
+- **Evaluation Dataset**: (https://www.kaggle.com/datasets/cosmos98/twitter-and-reddit-sentimental-analysis-dataset?resource=download).
 
 The Reddit-fine-tuned model consistently outperformed the original Twitter-based model in terms of both **accuracy** and **F1-score**.
+
+![Architecture](images/Compare_Results.png)
 
 ---
 
